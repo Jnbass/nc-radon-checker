@@ -9,7 +9,7 @@
     .container { max-width: 650px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
     h1, h2 { color: #2b2b2b; text-align: center; }
     h2 { margin-top: 30px; }
-    p { line-height: 1.5; }
+    p, ul, ol { line-height: 1.5; }
     label { display: block; margin-top: 20px; font-weight: bold; }
     select { width: 100%; padding: 8px; margin-top: 5px; }
     button { margin-top: 20px; padding: 10px 20px; background: #007B5E; color: white; border: none; border-radius: 5px; cursor: pointer; }
@@ -21,8 +21,6 @@
     .low { background: green; }
     .medium { background: orange; }
     .high { background: red; }
-
-    /* Result styling */
     .result { margin-top: 30px; padding: 15px; border-radius: 6px; color: white; }
     .bg-low    { background: green; }
     .bg-medium { background: orange; }
@@ -35,52 +33,118 @@
 
     <h2>What is Radon?</h2>
     <p>Radon is an invisible, odorless gas that comes from the dirt and rock under your home. It can build up to levels that increase your chance of lung cancer.</p>
-    <p>We measure radon in <strong>picocuries per liter (pCi/L)</strong>. A pCi/L shows how much radon is in the air you breathe. The EPA says you should fix your home if it reads <strong>4 pCi/L</strong> or higher. Even 2–3.9 pCi/L can be risky.</p>
+    <p>We measure radon in <strong>picocuries per liter (pCi/L)</strong>. The EPA says you should fix your home if it reads <strong>4 pCi/L</strong> or higher. Even 2–3.9 pCi/L can be risky.</p>
 
     <h2>Radon Levels in North Carolina</h2>
-    <img src="nc_radon_map_colored.png" alt="Map of North Carolina counties colored by radon risk level" class="map">
+    <img src="nc_radon_map_colored.png" alt="Map of NC counties colored by radon risk" class="map">
     <div class="legend">
       <div><span class="high"></span>High (≥4 pCi/L)</div>
       <div><span class="medium"></span>Medium (2–3.9 pCi/L)</div>
-      <div><span class="low"></span>Low (&lt;2 pCi/L)</div>
+      <div><span class="low"></span>Low (<2 pCi/L)</div>
     </div>
-
-    <h2>Testing for Radon</h2>
-    <p>Testing your home tells you if radon levels are safe. You can hire a radon professional or use a do-it-yourself test kit.</p>
-
-    <h3>About Radon Test Kits</h3>
-    <p>Use a kit that’s been tested and approved by a national radon lab. The following companies make these kits:</p>
-    <ul>
-      <li>Accustar</li>
-      <li>Air Chek</li>
-      <li>Alpha Energy Laboratories</li>
-      <li>Pro Lab</li>
-      <li>RSSI</li>
-      <li>RTCA</li>
-    </ul>
-
-    <h3>How to Test</h3>
-    <ol>
-      <li>Use a short-term test (at least 48 hours). If it reads ≥4 pCi/L, go to step 2.</li>
-      <li>Do a follow-up test: either a long-term kit (for a yearly average) or a second short-term kit (for quick results).</li>
-      <li>If your long-term result is ≥4 pCi/L, fix your home. If you did two short-term tests, average the two—if ≥4 pCi/L, fix your home. Aim for 2 pCi/L or lower.</li>
-    </ol>
-
-    <h3>Hiring a Professional</h3>
-    <p>The NC Radon Program recommends a certified radon measurement professional. They can use a continuous radon monitor for more detailed hourly data and provide a full analysis of your results. Check their credentials and ask for references.</p>
 
     <label for="county">What North Carolina county do you live in?</label>
     <select id="county">
-      <!-- High -->
+      <option value="medium">Alamance County</option>
+      <option value="medium">Alexander County</option>
+      <option value="medium">Alleghany County</option>
+      <option value="medium">Anson County</option>
+      <option value="medium">Ashe County</option>
+      <option value="medium">Avery County</option>
+      <option value="medium">Beaufort County</option>
+      <option value="medium">Bertie County</option>
+      <option value="medium">Bladen County</option>
+      <option value="medium">Brunswick County</option>
       <option value="high">Buncombe County</option>
+      <option value="medium">Burke County</option>
+      <option value="medium">Cabarrus County</option>
+      <option value="medium">Caldwell County</option>
+      <option value="medium">Camden County</option>
+      <option value="medium">Carteret County</option>
+      <option value="medium">Caswell County</option>
       <option value="high">Catawba County</option>
+      <option value="medium">Chatham County</option>
+      <option value="medium">Cherokee County</option>
+      <option value="medium">Chowan County</option>
+      <option value="medium">Clay County</option>
+      <option value="medium">Cleveland County</option>
+      <option value="medium">Columbus County</option>
+      <option value="medium">Craven County</option>
+      <option value="medium">Cumberland County</option>
+      <option value="medium">Currituck County</option>
+      <option value="medium">Dare County</option>
+      <option value="medium">Davidson County</option>
+      <option value="medium">Davie County</option>
+      <option value="medium">Duplin County</option>
+      <option value="medium">Durham County</option>
+      <option value="medium">Edgecombe County</option>
       <option value="high">Forsyth County</option>
+      <option value="medium">Franklin County</option>
+      <option value="medium">Gaston County</option>
+      <option value="medium">Gates County</option>
+      <option value="medium">Graham County</option>
       <option value="high">Granville County</option>
+      <option value="medium">Greene County</option>
       <option value="high">Guilford County</option>
-      <!-- Low -->
+      <option value="medium">Halifax County</option>
+      <option value="medium">Harnett County</option>
+      <option value="medium">Haywood County</option>
+      <option value="medium">Henderson County</option>
+      <option value="medium">Hertford County</option>
+      <option value="medium">Hoke County</option>
       <option value="low">Hyde County</option>
-      <!-- Medium (all others) -->
-      <!-- ... other counties as <option value="medium">County Name</option> ... -->
+      <option value="medium">Iredell County</option>
+      <option value="medium">Jackson County</option>
+      <option value="medium">Johnston County</option>
+      <option value="medium">Jones County</option>
+      <option value="medium">Lee County</option>
+      <option value="medium">Lenoir County</option>
+      <option value="medium">Lincoln County</option>
+      <option value="medium">McDowell County</option>
+      <option value="medium">Macon County</option>
+      <option value="medium">Madison County</option>
+      <option value="medium">Martin County</option>
+      <option value="medium">Mecklenburg County</option>
+      <option value="medium">Mitchell County</option>
+      <option value="medium">Montgomery County</option>
+      <option value="medium">Moore County</option>
+      <option value="medium">Nash County</option>
+      <option value="medium">New Hanover County</option>
+      <option value="medium">Northampton County</option>
+      <option value="medium">Onslow County</option>
+      <option value="medium">Orange County</option>
+      <option value="medium">Pamlico County</option>
+      <option value="medium">Pasquotank County</option>
+      <option value="medium">Pender County</option>
+      <option value="medium">Perquimans County</option>
+      <option value="medium">Person County</option>
+      <option value="medium">Pitt County</option>
+      <option value="medium">Polk County</option>
+      <option value="medium">Randolph County</option>
+      <option value="medium">Richmond County</option>
+      <option value="medium">Robeson County</option>
+      <option value="medium">Rockingham County</option>
+      <option value="medium">Rowan County</option>
+      <option value="medium">Rutherford County</option>
+      <option value="medium">Sampson County</option>
+      <option value="medium">Scotland County</option>
+      <option value="medium">Stanly County</option>
+      <option value="medium">Stokes County</option>
+      <option value="medium">Surry County</option>
+      <option value="medium">Swain County</option>
+      <option value="medium">Transylvania County</option>
+      <option value="medium">Tyrrell County</option>
+      <option value="medium">Union County</option>
+      <option value="medium">Vance County</option>
+      <option value="medium">Wake County</option>
+      <option value="medium">Warren County</option>
+      <option value="medium">Washington County</option>
+      <option value="medium">Watauga County</option>
+      <option value="medium">Wayne County</option>
+      <option value="medium">Wilkes County</option>
+      <option value="medium">Wilson County</option>
+      <option value="medium">Yadkin County</option>
+      <option value="medium">Yancey County</option>
     </select>
 
     <label for="foundation">Which best describes your home’s foundation?</label>
@@ -100,10 +164,16 @@
     </select>
 
     <label for="tested">Has your home been tested for radon?</label>
-    <select id="tested">
+    <select id="tested">  
       <option value="high">Yes, it was 4 pCi/L or higher</option>
       <option value="low">Yes, it was below 4 pCi/L</option>
       <option value="no">No / I don’t know</option>
+    </select>
+
+    <label for="well">Do you have private well water?</label>
+    <select id="well">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
     </select>
 
     <button onclick="generateResult()">Show My Radon Risk</button>
@@ -117,9 +187,9 @@
       const foundation = document.getElementById("foundation").value;
       const ownership  = document.getElementById("ownership").value;
       const tested     = document.getElementById("tested").value;
-      
+      const well       = document.getElementById("well").value;
+
       const output = document.getElementById("output");
-      // Reset classes and show
       output.className = 'result bg-' + county;
       output.style.display = 'block';
 
@@ -149,6 +219,37 @@
         message += `<p><strong>You haven’t tested, or you don’t know. Please test your home soon.</strong></p>`;
       } else if (tested === "high") {
         message += `<p>Your last test showed <strong>high radon</strong>. Contact a radon professional to fix this.</p>`;
+      }
+
+      // Kit & professional info
+      message += `
+        <h3>About Radon Test Kits</h3>
+        <p>Use a kit that’s been evaluated by a national radon lab. Get test kits from the <a href="https://www.ncdhhs.gov/divisions/health-service-regulation/north-carolina-radon-program/testing-radon" target="_blank">NC Radon Program</a> or these vendors:</p>
+        <ul>
+          <li><a href="https://www.accustarlabs.com" target="_blank">Accustar</a></li>
+          <li><a href="https://www.radon.com" target="_blank">Air Chek</a></li>
+          <li><a href="https://www.aelabs.com" target="_blank">Alpha Energy Laboratories</a></li>
+          <li><a href="https://www.prolabinc.com" target="_blank">Pro Lab</a></li>
+          <li><a href="https://rssi.us" target="_blank">RSSI</a></li>
+          <li><a href="https://rtca.com" target="_blank">RTCA</a></li>
+        </ul>
+      `;
+
+      message += `
+        <h3>Who Should I Hire?</h3>
+        <p>Hire a certified radon professional. Learn more at the <a href="https://www.ncdhhs.gov/divisions/health-service-regulation/north-carolina-radon-program/testing-radon" target="_blank">NC Radon Program</a> or through these certification bodies:</p>
+        <ul>
+          <li><a href="https://nrpp.info" target="_blank">National Radon Proficiency Program (NRPP)</a></li>
+          <li><a href="https://www.nrsb.org" target="_blank">National Radon Safety Board (NRSB)</a></li>
+          <li><a href="https://inspectornation.com" target="_blank">Inspector Nation</a></li>
+        </ul>
+      `;
+
+      if (well === "yes") {
+        message += `
+          <h3>Testing for Radon in Private Well Water</h3>
+          <p>If you have a private well, radon in water can add to indoor air levels. First test your air; then consider water testing if air is high. Learn protocols at <a href="https://www.ncdhhs.gov/divisions/health-service-regulation/north-carolina-radon-program/testing-radon" target="_blank">NC Radon Well Testing</a>.</p>
+        `;
       }
 
       message += `<h3>Still have questions?</h3><p>View the <a href="radon_testing_protocols.pdf" target="_blank">official testing protocols</a> for more details.</p>`;
