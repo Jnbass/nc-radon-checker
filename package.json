@@ -1,0 +1,24 @@
+{
+  "name": "nc-radon-checker",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://jnbass.github.io/nc-radon-checker",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-simple-maps": "^3.0.0",
+    "d3-scale": "^4.0.2",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "gh-pages": "^5.0.0"
+  }
+}
