@@ -9,7 +9,7 @@
     .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
     h1 { color: #2b2b2b; text-align: center; }
     label { display: block; margin-top: 15px; font-weight: bold; }
-    select, input[type="radio"] { width: 100%; padding: 8px; margin-top: 5px; }
+    select { width: 100%; padding: 8px; margin-top: 5px; }
     .result { margin-top: 30px; background: #e6f4ea; padding: 15px; border-radius: 6px; }
     button { margin-top: 20px; padding: 10px 20px; background: #007B5E; color: white; border: none; border-radius: 5px; cursor: pointer; }
     button:hover { background: #005f47; }
@@ -18,8 +18,171 @@
 <body>
   <div class="container">
     <h1>Is Your Home Safe from Radon?</h1>
-    <!-- Truncated for brevity: includes county dropdown and rest of form -->
-    <p>This file has been packaged for upload to GitHub or Netlify.</p>
+
+    <label for="county">Where do you live?</label>
+    <select id="county">
+      <option value="low">Alamance County</option>
+      <option value="medium">Alexander County</option>
+      <option value="medium">Alleghany County</option>
+      <option value="low">Anson County</option>
+      <option value="medium">Ashe County</option>
+      <option value="medium">Avery County</option>
+      <option value="low">Beaufort County</option>
+      <option value="medium">Bertie County</option>
+      <option value="medium">Bladen County</option>
+      <option value="medium">Brunswick County</option>
+      <option value="high">Buncombe County</option>
+      <option value="high">Burke County</option>
+      <option value="medium">Cabarrus County</option>
+      <option value="medium">Caldwell County</option>
+      <option value="low">Camden County</option>
+      <option value="medium">Carteret County</option>
+      <option value="medium">Caswell County</option>
+      <option value="high">Catawba County</option>
+      <option value="medium">Chatham County</option>
+      <option value="medium">Cherokee County</option>
+      <option value="medium">Chowan County</option>
+      <option value="medium">Clay County</option>
+      <option value="medium">Cleveland County</option>
+      <option value="medium">Columbus County</option>
+      <option value="low">Craven County</option>
+      <option value="medium">Cumberland County</option>
+      <option value="low">Currituck County</option>
+      <option value="medium">Dare County</option>
+      <option value="medium">Davidson County</option>
+      <option value="medium">Davie County</option>
+      <option value="medium">Duplin County</option>
+      <option value="medium">Durham County</option>
+      <option value="medium">Edgecombe County</option>
+      <option value="high">Forsyth County</option>
+      <option value="medium">Franklin County</option>
+      <option value="medium">Gaston County</option>
+      <option value="medium">Gates County</option>
+      <option value="medium">Graham County</option>
+      <option value="high">Granville County</option>
+      <option value="medium">Greene County</option>
+      <option value="high">Guilford County</option>
+      <option value="medium">Halifax County</option>
+      <option value="medium">Harnett County</option>
+      <option value="medium">Haywood County</option>
+      <option value="medium">Henderson County</option>
+      <option value="medium">Hertford County</option>
+      <option value="medium">Hoke County</option>
+      <option value="low">Hyde County</option>
+      <option value="medium">Iredell County</option>
+      <option value="medium">Jackson County</option>
+      <option value="medium">Johnston County</option>
+      <option value="medium">Jones County</option>
+      <option value="medium">Lee County</option>
+      <option value="medium">Lenoir County</option>
+      <option value="medium">Lincoln County</option>
+      <option value="medium">McDowell County</option>
+      <option value="medium">Macon County</option>
+      <option value="medium">Madison County</option>
+      <option value="medium">Martin County</option>
+      <option value="medium">Mecklenburg County</option>
+      <option value="medium">Mitchell County</option>
+      <option value="medium">Montgomery County</option>
+      <option value="medium">Moore County</option>
+      <option value="medium">Nash County</option>
+      <option value="medium">New Hanover County</option>
+      <option value="medium">Northampton County</option>
+      <option value="medium">Onslow County</option>
+      <option value="medium">Orange County</option>
+      <option value="medium">Pamlico County</option>
+      <option value="medium">Pasquotank County</option>
+      <option value="medium">Pender County</option>
+      <option value="medium">Perquimans County</option>
+      <option value="medium">Person County</option>
+      <option value="medium">Pitt County</option>
+      <option value="medium">Polk County</option>
+      <option value="medium">Randolph County</option>
+      <option value="medium">Richmond County</option>
+      <option value="medium">Robeson County</option>
+      <option value="medium">Rockingham County</option>
+      <option value="medium">Rowan County</option>
+      <option value="medium">Rutherford County</option>
+      <option value="medium">Sampson County</option>
+      <option value="medium">Scotland County</option>
+      <option value="medium">Stanly County</option>
+      <option value="medium">Stokes County</option>
+      <option value="medium">Surry County</option>
+      <option value="medium">Swain County</option>
+      <option value="medium">Transylvania County</option>
+      <option value="medium">Tyrrell County</option>
+      <option value="medium">Union County</option>
+      <option value="medium">Vance County</option>
+      <option value="medium">Wake County</option>
+      <option value="medium">Warren County</option>
+      <option value="medium">Washington County</option>
+      <option value="medium">Watauga County</option>
+      <option value="medium">Wayne County</option>
+      <option value="medium">Wilkes County</option>
+      <option value="medium">Wilson County</option>
+      <option value="medium">Yadkin County</option>
+      <option value="medium">Yancey County</option>
+    </select>
+
+    <label for="homeType">What type of home do you live in?</label>
+    <select id="homeType">
+      <option value="basement">Basement</option>
+      <option value="crawlspace">Crawlspace</option>
+      <option value="slab">Slab-on-grade</option>
+      <option value="mobile">Mobile Home</option>
+      <option value="unknown">I'm not sure</option>
+    </select>
+
+    <label for="ownership">Do you rent or own your home?</label>
+    <select id="ownership">
+      <option value="rent">I rent</option>
+      <option value="own">I own</option>
+      <option value="public">I live in public housing</option>
+    </select>
+
+    <label for="tested">Have you tested your home for radon?</label>
+    <select id="tested">
+      <option value="high">Yes, and it was over 4 pCi/L</option>
+      <option value="low">Yes, and it was under 4</option>
+      <option value="no">No / I don't know</option>
+    </select>
+
+    <button onclick="generateResult()">Check My Risk</button>
+
+    <div id="output" class="result" style="display:none;"></div>
   </div>
+  <script>
+    function generateResult() {
+      const county = document.getElementById("county").value;
+      const homeType = document.getElementById("homeType").value;
+      const ownership = document.getElementById("ownership").value;
+      const tested = document.getElementById("tested").value;
+      let message = "<h3>Your Radon Risk Summary</h3>";
+      if (county === "high") {
+        message += "<p>You live in a <strong>high-risk county for radon exposure</strong>. Testing is strongly recommended.</p>";
+      } else if (county === "medium") {
+        message += "<p>You live in a <strong>moderate-risk county</strong>. Testing is still a good idea.</p>";
+      } else {
+        message += "<p>You live in a <strong>low-risk county</strong>, but testing your home is still the only way to know your risk.</p>";
+      }
+      if (homeType === "basement" || homeType === "crawlspace") {
+        message += "<p>Your home type may let more radon gas enter from the ground. Testing is important.</p>";
+      } else if (homeType === "mobile") {
+        message += "<p>Mobile homes are usually safer if properly ventilated, but testing is still recommended.</p>";
+      }
+      if (ownership === "rent") {
+        message += "<p>As a renter, your landlord should ensure a safe home. You can <a href='#'>download a letter</a> asking them to test for radon.</p>";
+      }
+      if (tested === "no") {
+        message += "<p><strong>You have not tested for radon. We recommend ordering a test kit right away.</strong></p>";
+      } else if (tested === "high") {
+        message += "<p>Your past test showed high levels. You should speak with a radon mitigation professional.</p>";
+      }
+      message += "<p><strong>Need a test kit?</strong> Check with your local health department. Many North Carolina counties offer free radon kits.</p>";
+      const output = document.getElementById("output");
+      output.style.display = "block";
+      output.innerHTML = message;
+    }
+  </script>
 </body>
 </html>
+
